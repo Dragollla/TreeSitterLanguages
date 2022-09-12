@@ -6,6 +6,6 @@ import TreeSitterGQLQueries
 public extension TreeSitterLanguage {
     static var graphql: TreeSitterLanguage {
         let highlightsQuery = TreeSitterLanguage.Query(contentsOf: TreeSitterGQLQueries.Query.highlightsFileURL)
-        return TreeSitterLanguage(tree_sitter_graphql(), highlightsQuery: highlightsQuery)
+        return TreeSitterLanguage(tree_sitter_graphql(), highlightsQuery: highlightsQuery, injectionsQuery: nil, indentationScopes: .graphql)
     }
 }
